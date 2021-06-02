@@ -8,6 +8,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <header>
+            <h1 id="title">Survey form</h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
+        </header>
+
+        <main>
+            <form action="\" id="survey-form">
+                <label for="name" id="name-label">
+                    <p>Name</p>
+                    <input type="text" id="name" required placeholder="Enter your Name" name="name">
+                </label>
+                <label for="email" id="email-label">
+                    <p>Email</p>
+                    <input type="email" id="email" required placeholder="Enter your Email" name="email">
+                </label>
+                <label for="number" id="number-label">
+                    <p>Age (Optional)</p>
+                    <input type="number" id="number" min="18" max="99" placeholder="Age" name="age">
+                </label>
+                <label for="role" id="role-label">
+                    <p>Which option best describes your current role?</p>
+                    <select name="role" id="dropdown" required>
+                        <option disabled selected value>Select current role</option>
+                        <option value="student">Student</option>
+                        <option value="fulltime">Full Time Job</option>
+                    </select>
+                </label>
+                <div class="recommend">
+                    <p>Would you recommend freeCodeCamp to a friend?</p>
+                    <label for="definately">
+                        <input type="radio" id="definately" name="recommend" value="definately" checked>
+                        <p>Definately</p>
+                    </label>
+                    <label for="maybe">
+                        <input type="radio" id="maybe" name="recommend" value="maybe">
+                        <p>Maybe</p>
+                    </label>
+                    <label for="not-sure">
+                        <input type="radio" id="not-sure" name="recommend" value="Not sure">
+                        <p>Not Sure</p>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <p>What would you like to see improved? (Check all that apply)</p>
+                    <label for="front">
+                        <input type="checkbox" name="improve" id="front" value="front">
+                        <p>Front-end Projects</p>
+                    </label>
+                    <label for="back">
+                        <input type="checkbox" name="improve" id="front" value="back">
+                        <p>Front-end Projects</p>
+                    </label>
+                </div>
+                <div class="comment">
+                    <p>Any comments or suggestions?</p>
+                    <textarea name="comment" id="comment-text" cols="30" rows="10" placeholder="Enter your comment here ..."></textarea>
+                </div>
+                <div>
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
